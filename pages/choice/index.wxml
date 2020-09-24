@@ -1,0 +1,13 @@
+<import src="/lib/we-cropper/we-cropper.wxml" />
+<view class="cs-page">
+  <view class="cs-page-bg">
+    <template is="we-cropper" data="{{...cropperOpt}}" />
+  </view>
+  <view class="cs-operation">
+    <button class="cs-btn" type="default" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      选择当前头像
+    </button>
+    <button class="cs-btn" type="default" bind:tap="onChoice">选择照片</button>
+    <button class="cs-btn" type="primary" bind:tap="onNext" disabled="{{!src}}">下一步</button>
+  </view>
+</view>

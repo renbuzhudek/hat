@@ -1,0 +1,6 @@
+<image class="cs-bg" src="/image/bg.jpg" mode="heightFix"></image>
+
+<view class="cs-operation">
+  <button class="cs-while" bind:tap="onJump">开始设计</button>
+  <button open-type="feedback" type="warn" plain="true">意见反馈</button>
+</view>

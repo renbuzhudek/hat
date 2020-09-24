@@ -1,0 +1,21 @@
+.cs-page {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.cs-operation {
+  margin: 24rpx 0;
+}
+
+.cs-page-bg {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.cs-btn {
+  margin: 24rpx 0;
+}

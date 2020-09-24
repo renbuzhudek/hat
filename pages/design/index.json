@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-tabs": "/lib/tabs/index",
+    "mp-icon": "weui-miniprogram/icon/icon"
+  }
+}

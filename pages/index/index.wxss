@@ -1,0 +1,20 @@
+.cs-bg {
+  position: absolute;
+  height: 100vh;
+}
+.cs-operation {
+  position: absolute;
+  bottom: 48px;
+  left: 0;
+  width: 100vw;
+}
+.cs-while {
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  margin: 24rpx 0;
+}
+.cs-while:active {
+  color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.7);
+}

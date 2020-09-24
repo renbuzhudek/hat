@@ -1,0 +1,64 @@
+.cs-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.cs-bg {
+  width: 100%;
+}
+.cs-header {
+  background: #000;
+  padding: 24rpx;
+}
+.cs-con {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.cs-footer {
+  display: flex;
+  padding: 24rpx 12rpx;
+  align-items: center;
+}
+.cs-btn.cs-btn {
+  flex: 1;
+  margin: 0 12rpx;
+}
+.cs-tab-item {
+  padding: 0 16px;
+  color: #646566;
+  font-size: 14px;
+  line-height: 44px;
+  cursor: pointer;
+}
+
+.cs-tab-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.cs-tabs-swiper {
+  flex: 1;
+  height: auto;
+  overflow: auto;
+}
+.cs-bar-title__selected {
+  color: #323233;
+  font-weight: 500;
+}
+.tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: 100%;
+}
+.tab-content-bg {
+  width: 96rpx;
+  height: 96rpx;
+  margin: 12rpx;
+}
+.tab-content-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

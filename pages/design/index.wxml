@@ -1,0 +1,21 @@
+<view class="cs-page">
+  <view class="cs-header">
+    <image class="cs-bg" src="{{url}}" mode="widthFix" />
+  </view>
+  <view class="cs-con">
+    <mp-tabs duration="{{300}}" style="flex: 1" rootClass="cs-tab-root" tabClass="cs-tab-item" tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="cs-tabs-swiper" bindtabclick="onTabCLick" bindchange="onChange" activeClass="cs-bar-title__selected">
+      <block wx:for="{{tabs}}" wx:key="title">
+        <view class="tab-content" slot="tab-content-{{index}}">
+          <image wx:for="{{item.value}}" wx:for-item="li" wx:key="li" class="tab-content-bg" src="{{li}}" mode="scaleToFill" lazy-load="true" />
+          <view wx:if="{{tabs.length - 1 === index}}" bind:tap="onUp" data-index="{{index}}" class="tab-content-bg tab-content-ico">
+            <mp-icon icon="add" color="black" size="{{25}}"></mp-icon>
+          </view>
+        </view>
+      </block>
+    </mp-tabs>
+    <view class="cs-footer">
+      <button class="cs-btn" bind:tap="onBack">上一步</button>
+      <button type="primary" class="cs-btn" bind:tap="onNext">预览</button>
+    </view>
+  </view>
+</view>

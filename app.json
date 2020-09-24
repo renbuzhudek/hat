@@ -1,0 +1,14 @@
+{
+  "pages": ["pages/index/index", "pages/choice/index", "pages/design/index", "pages/preview/index"],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "给我个帽子",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "sitemapLocation": "sitemap.json"
+}
