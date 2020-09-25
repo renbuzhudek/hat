@@ -35,8 +35,12 @@ Page({
   choice(e) {
     const { src } = e.currentTarget.dataset;
     const w = app.globalData.width;
-    const left = w / 2 - 50;
-
+    const left = w / 2;
+    this.data.rotate.map((item) => {
+      const obj = item;
+      obj.show = false;
+      return obj;
+    });
     this.data.rotate.push({
       src,
       left,
@@ -62,5 +66,37 @@ Page({
       return i;
     });
     this.setData({ rotate: arr });
+  },
+  // 滑动开始
+  touchstart(e) {
+    const { index } = e.currentTarget.dataset;
+    const li = this.data.rotate[index];
+    if (!li) {
+      return;
+    }
+    const x = e.touches[0].clientX;
+    const y = e.touches[0].clientY;
+    li.moveLeft = x;
+    li.moveTop = y;
+    li.show = true;
+    this.setData({ rotate: this.data.rotate });
+  },
+  // 滑动移动
+  touchmove(e) {
+    const { index } = e.currentTarget.dataset;
+    const li = this.data.rotate[index];
+    if (!li) {
+      return;
+    }
+    const { moveLeft = 0, moveTop = 0 } = li;
+    const x = e.touches[0].clientX;
+    const y = e.touches[0].clientY;
+    const left = x - moveLeft;
+    const top = y - moveTop;
+    li.left += left;
+    li.top += top;
+    li.moveLeft = x;
+    li.moveTop = y;
+    this.setData({ rotate: this.data.rotate });
   },
 });

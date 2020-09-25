@@ -1,7 +1,7 @@
 <view class="cs-page">
   <view class="cs-header" bind:tap="onGlobalClick">
     <image class="cs-bg" src="{{url}}" mode="widthFix" />
-    <my-rotate catch:tap="onShowChange" data-index="{{index}}" show="{{item.show}}" class="cs-rotate" style="left: {{item.left}}px;top:{{item.top}}px" wx:for="{{rotate}}" wx:key="src" src="{{item.src}}"></my-rotate>
+    <my-rotate bind:touchstart="touchstart" bind:touchmove="touchmove" catch:tap="onShowChange" data-index="{{index}}" show="{{item.show}}" class="cs-rotate" style="left: {{item.left - 50}}px;top:{{item.top - 50}}px" wx:for="{{rotate}}" wx:key="src" src="{{item.src}}"></my-rotate>
   </view>
   <view class="cs-con">
     <mp-tabs duration="{{300}}" style="flex: 1" rootClass="cs-tab-root" tabClass="cs-tab-item" tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="cs-tabs-swiper" bindtabclick="onTabCLick" bindchange="onChange" activeClass="cs-bar-title__selected">
