@@ -1,12 +1,15 @@
 import WeCropper from '../../lib/we-cropper/we-cropper';
 import wxs from '../../lib/miniprogram-api-promise/index';
 
+const app = getApp();
+
 // 获取设备信息
 const device = wx.getSystemInfoSync();
 // 示例为一个与屏幕等宽的正方形裁剪框
 const width = device.windowWidth;
 const height = width;
 const w = width - 48;
+app.globalData.width = width;
 Component({
   data: {
     src: null,

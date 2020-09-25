@@ -1,0 +1,9 @@
+<view class="cs-rotate {{show ? 'cs-rotate-show' : ''}}">
+  <image class="cs-rotate-bg" src="{{src}}" mode="scaleToFill" />
+  <view bind:tap="onDelete" wx:if="{{show}}" class="cs-rotate-delete">
+    <mp-icon icon="close" color="#fff" size="{{16}}"></mp-icon>
+  </view>
+  <view bind:tap="onRotate" wx:if="{{show}}" class="cs-rotate-sacle">
+    <mp-icon icon="refresh" color="#fff" size="{{16}}"></mp-icon>
+  </view>
+</view>

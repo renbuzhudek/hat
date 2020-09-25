@@ -62,3 +62,6 @@
   align-items: center;
   justify-content: center;
 }
+.cs-rotate {
+  position: absolute;
+}

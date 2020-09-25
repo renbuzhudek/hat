@@ -14,6 +14,7 @@ module.exports = {
     wx: true,
     Page: true,
     Component: true,
+    getApp: true,
   },
   rules: {
     'linebreak-style': 'off',
